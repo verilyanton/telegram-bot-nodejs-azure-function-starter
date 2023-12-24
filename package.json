@@ -1,5 +1,5 @@
 {
-  "name": "telegram-bot-nodejs-azure-function-starter",
+  "name": "ecovisiopolicybot",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
