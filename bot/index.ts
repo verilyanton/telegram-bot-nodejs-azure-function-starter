@@ -7,7 +7,6 @@ import { Telegraf } from 'telegraf';
 import { AzureFunction, Context, HttpRequest } from '@azure/functions';
 import intercept from 'azure-function-log-intercept';
 import { throwIfNo } from './utils/throwIf';
-import { setBotCommands } from './commands/botCommands';
 
 require('dotenv').config();
 
@@ -25,7 +24,6 @@ if (!devMode) {
     bot = new Telegraf(BOT_TOKEN, { telegram: { webhookReply: true } });
     bot.telegram.setWebhook(WEBHOOK_ADDRESS);
 
-    setBotCommands(bot);
 
     bot.catch((err, ctx) => { console.log(`Error for ${ctx.updateType}`, err); });
 }
@@ -47,7 +45,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         } else {
             const bot = new Telegraf(BOT_TOKEN);
 
-            setBotCommands(bot);
+            bot.use(require('./composers/start.composer'))
 
             bot.launch();
         }
