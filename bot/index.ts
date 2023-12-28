@@ -1,21 +1,26 @@
-const { Telegraf } = require('telegraf')
-const { message } = require('telegraf/filters')
+import {seniorComposer} from "./composers/senior.composer";
+import {startComposer} from "./composers/start.composer";
+import {juniorComposer} from "./composers/junior.composer";
+import {helpComposer} from "./composers/help.composer";
+import {generalInfoComposer} from "./composers/general_info.composer";
 
-import { startComposer } from "./composers/start.composer";
+const {Telegraf} = require("telegraf")
+const {message} = require("telegraf/filters")
 
-require('dotenv').config();
+require("dotenv").config();
 
-// const devMode = process.env.NODE_ENV === 'development';
-const { BOT_TOKEN, WEBHOOK_ADDRESS } = process.env;
+const {BOT_TOKEN, WEBHOOK_ADDRESS} = process.env;
 
-const bot = new Telegraf(BOT_TOKEN, { telegram: { webhookReply: true } });
+const bot = new Telegraf(BOT_TOKEN, {telegram: {webhookReply: true}});
 bot.telegram.setWebhook(WEBHOOK_ADDRESS);
 
 bot.use(startComposer);
-// bot.start((ctx) => ctx.reply('Welcome'))
-bot.help((ctx) => ctx.reply('Send me a sticker'))
+bot.use(juniorComposer);
+bot.use(seniorComposer);
+bot.use(helpComposer);
+bot.use(generalInfoComposer);
+
 bot.on(message('sticker'), (ctx) => ctx.reply('👍'))
-bot.hears('hi', (ctx) => ctx.reply('Hey there'))
 bot.launch()
 
 // Enable graceful stop

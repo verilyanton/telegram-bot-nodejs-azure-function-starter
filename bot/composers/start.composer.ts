@@ -1,8 +1,8 @@
-import {Composer, Markup} from 'telegraf';
+import {Composer, Markup} from "telegraf";
 
 export const startComposer = Composer.command('start', async ctx => {
     const message = `
-Salut, ${ctx.message.from.first_name ? ctx.message.from.first_name : "who are you?"}!
+Salut, ${ctx.message.from.first_name ? ctx.message.from.first_name : "anonim"}!
 
 Aici poți gasi orice informatie de care ai nevoie 
 in politica organizatie EcoVisio, 
