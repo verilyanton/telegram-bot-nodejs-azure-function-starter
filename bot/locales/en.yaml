@@ -1,0 +1,69 @@
+start: |
+  Salut, ${ctx.message.from.first_name ? ctx.message.from.first_name : "who are you?"}!
+  
+  Aici poți gasi orice informatie de care ai nevoie 
+  in politica organizatie EcoVisio, 
+  pentru orientare mai buna in bot sunt 2 directii
+  Junior si Senior
+
+  Tot asa se poate sa te uiti la general cu ajutorul comenzii /help
+command: |
+  <b>Commands:</b>
+  /start - 
+  /help -
+  /junior - 
+  /senior - 
+  /general -
+internal_policies: |
+  <b>Internal policies and regulations 📜</b>
+working_program: |
+  <b>Working program 📆</b>
+organizational_chart: |
+  <b>Organizational chart</b>
+componenta_echipei: |
+  PR Team 
+  Componența echipei
+  Scrieți mereu la adresa: communications@ecovisio.org
+  Iana Cușnir
+  iana.cusnir@ecovisio.org
+  cusnir.iana6@gmail.com - pentru a da acces la documente Google Drive
+  +373 79403063 - metoda principală de comunicare rămâne email, sunați doar dacă este urgent
+
+  Mutruc Laurențiu 
+  laur.mutruc@ecovisio.org
+  mutruc.laur@gmail.com  - pentru a da acces la documente Google Drive
+  +373 68899020  - metoda principală de comunicare rămâne email, sunați doar dacă este urgent
+
+informații_generale: |
+  <b>Informații generale despre EcoVisio 🖼</b>
+editors_0: |
+  <b>Fondatorii</b>
+  -sdf
+  -hashbdf
+editors_1: |
+  short text 
+  link 
+  https://docs.google.com/presentation/d/1yPte7CYys1OhMCpDvRvtZUtHo0nfrDDFWgY53bBC85E/edit?usp=sharing
+working_instruments: |
+  <b>Working instruments 🛠</b>
+working_instruments_2: |
+  <b>Checklists for staff</b>
+  Pentru ușurarea procesului de organizare a lucrului au fost elaborate câteva liste de verificare, numite checklists. Acestea sunt destinate coordonatorilor de proiecte și celor care vor organiza evenimente. Mai jos găsiți checklisturile existente:
+projects_coordination: |
+  <b>Projects coordination 🧩</b>
+communication: |
+  <b>Communication in EcoVisio 📩</b>
+lifehacks: |
+  <b>Documentation management 📗</b>
+fundraising: |
+  <b>Fundraising 💰</b>
+service: |
+    <b>Service provision in EcoVisio 👩‍🔬</b>
+ask: 
+ hello dude
+Securitatea informațiilor:
+  IMPORTANT!!! EcoVisio este operator oficial de date personale. 
+  https://docs.google.com/document/d/1yULf3fwoPE85vyx7nEhQNBpqJ5t-B773nRajxvbY4Y0/edit?usp=sharing
+Reguli de securitate pentru lucru de la oficiu, acasă sau în teren:
+  Reguli de securitate pentru lucru de la oficiu, acasă sau în teren
+  https://docs.google.com/document/d/1yULf3fwoPE85vyx7nEhQNBpqJ5t-B773nRajxvbY4Y0/edit?usp=drive_link
